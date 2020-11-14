@@ -12,6 +12,7 @@ services:
     ports:
       - 3080:3000
       # - 9229:9229
+      - 5555:5555
     working_dir: /blitz-first
     tty: true
   db:
@@ -21,10 +22,6 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: password
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - 8000:80
 volumes:
   node_modules:
   mysql-data:
