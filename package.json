@@ -4,6 +4,7 @@
   "scripts": {
     "start": "blitz start",
     "studio": "blitz db studio",
+    "db:migrate": "blitz db migrate",
     "build": "blitz build",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "test": "jest",
