@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   app:
@@ -8,12 +8,23 @@ services:
     volumes:
       - ../:/blitz-first:delegated
       - node_modules:/blitz-first/node_modules
+      - /blitz-first/.blitz
     ports:
       - 3080:3000
       # - 9229:9229
-    # env_file:
-    #   - ../.env
     working_dir: /blitz-first
     tty: true
+  db:
+    image: mysql:8.0.20
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8000:80
 volumes:
   node_modules:
+  mysql-data:
