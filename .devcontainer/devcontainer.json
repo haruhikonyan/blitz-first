@@ -1,0 +1,17 @@
+  
+{
+  "name": "blitz-first",
+  "dockerComposeFile": [
+    "./docker-compose.yml",
+  ],
+  "service": "app",
+  "workspaceFolder": "/blitz-first",
+  "settings": {
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "yarn",
+  // "initializeCommand": "if [ ! -f .devcontainer/.env ];then cp .devcontainer/.env.sample .devcontainer/.env;fi"
+}
