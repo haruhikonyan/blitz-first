@@ -51,7 +51,7 @@ const UserInfo = () => {
 
 const Home: BlitzPage = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <main>
         <div className="logo">
           <img src="/logo.png" alt="blitz.js" />
